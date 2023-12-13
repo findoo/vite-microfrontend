@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.4 (2023-12-13)
+
+### Bug Fixes
+
+- **application-shell:** testing independent versioning ([449fa6e](https://github.com/findoo/vite-microfrontend/commit/449fa6e637133f99596bb5aaaecd8aa0eee05c12))
+
 ## 0.0.3 (2023-12-13)
 
 ### Bug Fixes
