@@ -2,7 +2,9 @@
   "name": "@microfront-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "publish-lerna": "lerna version --conventional-commits --yes"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",
