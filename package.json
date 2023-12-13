@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "publish-lerna": "lerna version --conventional-commits --yes"
+    "publish-lerna": "lerna version --conventional-commits --yes",
+    "test": "nx run-many -t test"
   },
   "private": true,
   "dependencies": {
