@@ -7,8 +7,8 @@ const MicrofrontendChild = lazy(() => import('remoteApp/app'));
 export function App() {
   return (
     <div>
-      Application Shell
-      <br />
+      <div>Application Shell</div>
+
       <LoadingBoundary>
         <MicrofrontendChild />
       </LoadingBoundary>
