@@ -2,22 +2,35 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import federation from '@originjs/vite-plugin-federation';
+import { join } from 'path';
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/microfrontend-child',
 
   server: {
-    port: 4200,
+    port: 4201,
     host: 'localhost',
   },
 
   preview: {
-    port: 4300,
+    port: 4301,
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [
+    react(),
+    nxViteTsPaths(),
+    federation({
+      name: 'microfrontend-child',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './app': join(__dirname, 'src/app/app'),
+      },
+      shared: ['react', 'react-dom'],
+    }),
+  ],
 
   // Uncomment this if you are using workers.
   // worker: {
@@ -25,11 +38,13 @@ export default defineConfig({
   // },
 
   build: {
+    target: 'esnext',
     outDir: '../../dist/apps/microfrontend-child',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
+    cssCodeSplit: false,
   },
 
   test: {
