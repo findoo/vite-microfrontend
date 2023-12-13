@@ -1,6 +1,9 @@
-# MicrofrontMonorepo
+# Vite-Microfrontend
 
 Messing around with Vite / Nx / Module Federation to demo a monorepo microfrontend architecture.
+
+<img width="740" alt="Screenshot 2023-12-13 at 17 28 20" src="https://github.com/findoo/vite-microfrontend/assets/3541918/127340f0-2c98-4c6c-a3ff-6ba93949ab93">
+
 
 ## Getting Started
 
